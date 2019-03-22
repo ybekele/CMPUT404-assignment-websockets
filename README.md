@@ -17,10 +17,21 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Resources
+========================
+I used Chat.py by Abram Hindle as a reference and used lines 42-57 specifically as well as the read_ws and subscribe_socket function format. https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py 
+
+I used my own function in CMPUT404-Assignment 4 for the update function. Did not end up needing to use this however, I had tried implementing it and left it in the code therefore I am making a note of it. https://github.com/ybekele/CMPUT404-assignment-ajax
+
+https://docs.python.org/2/library/json.html for more information on json.dumps 
+https://www.w3schools.com/python/python_json.asp for more information on json.dumps
+
+I used the class notes by Abram Hindle to better familiarize myself with Websockets.
+
 Contributors / Licensing
 ========================
 
-Generally everything is LICENSE'D under the Apache 2 license by Abram Hindle.
+Generally everything is LICENSE'D under the Apache 2 license by Abram Hindle. Additions made by Yonael Bekele are also LICENSE'D under the Apache 2 license. 
 
 freetests.py is LICENSE'D under a BSD-like license:
 
