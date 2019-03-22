@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 Resources
 ========================
-I used Chat.py by Abram Hindle as a reference and used lines 42-57 specifically as well as the read_ws and subscribe_socket function format. https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py and https://github.com/abramhindle/WebSocketsExamples/blob/master/static/chat.html for index.html
+I used Chat.py by Abram Hindle as a reference and used lines 42-57 specifically as well as the read_ws and subscribe_socket function format. https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py and https://github.com/abramhindle/WebSocketsExamples/blob/master/static/chat.html for index.html (specifically socket.onmessage function)
 
 I used my own function in CMPUT404-Assignment 4 for the update function. Did not end up needing to use this however, I had tried implementing it and left it in the code therefore I am making a note of it. https://github.com/ybekele/CMPUT404-assignment-ajax
 
