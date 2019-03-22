@@ -55,7 +55,26 @@ function drawCircle(context,entity) {
         fillStyle = entity["colour"];
         strokeStyle = fillStyle;
         arc(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, false);  
-        stroke();                                
+        stroke();      
+        
+        
+
+    // Cubic curves example
+    
+        moveTo(75, 40);
+        bezierCurveTo(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, true); 
+        moveTo(x + 75, y + 40);
+        bezierCurveTo(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, false);
+        moveTo(x + 75, y);
+        bezierCurveTo(x, y, (entity["radius"])?entity["radius"]:50, 0, Math.PI, true);
+        moveTo(x, y + 40);
+        bezierCurveTo(x, y, (entity["radius"])?entity["radius"]:50, 0, Math.PI, false);
+        moveTo(x + 20, y + 20);
+        bezierCurveTo(x, y, (entity["radius"])?entity["radius"]:50, 0, 0, false);
+        moveTo(x + 50, y + 50);
+        bezierCurveTo(x, y, (entity["radius"])?entity["radius"]:50, 0, 0, true);
+        moveTo(x, y);
+        stroke();                                                         
     }
 }
 
@@ -231,15 +250,15 @@ mouse = (function() {
 // Add the application specific mouse listeners!
 //XXX: TODO Make these prettier!
 mouse.mousedowners.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'blue'});
+    addEntityWithoutName({'x':x,'y':y,'colour':'yellow'});
 });
 
 mouse.mouseuppers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'red'});
+    addEntityWithoutName({'x':x,'y':y,'colour':'#BFFF00'});
 });
 
 mouse.mousedraggers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'green',
+    addEntityWithoutName({'x':x,'y':y,'colour':'#FFC0CB',
                           'radius':10});
 });
 
