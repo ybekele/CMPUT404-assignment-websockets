@@ -250,7 +250,7 @@ mouse = (function() {
 // Add the application specific mouse listeners!
 //XXX: TODO Make these prettier!
 mouse.mousedowners.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'yellow'});
+    addEntityWithoutName({'x':x,'y':y,'colour':'#ADFF2F'});
 });
 
 mouse.mouseuppers.push(function(x,y,clicked,e) {
@@ -258,7 +258,7 @@ mouse.mouseuppers.push(function(x,y,clicked,e) {
 });
 
 mouse.mousedraggers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'#FFC0CB',
+    addEntityWithoutName({'x':x,'y':y,'colour':'#FF69B4',
                           'radius':10});
 });
 
@@ -280,7 +280,13 @@ function wsSetup() {
     socket.onmessage = function(msg) {  
         try {
             debug("WebSocket Recv:" + msg.data);
-            //XXX: TODO What are you going to do here?            
+            //XXX: TODO What are you going to do here?   
+            var message = JSON.parse(msg.data);
+            for (var entity in message) {
+                world[entity] = message[entity];
+                }
+            drawNextFrame();                    
+
         } catch (e) {
             alert("socket on message: " + e);
         }
