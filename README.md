@@ -28,6 +28,8 @@ https://www.w3schools.com/python/python_json.asp for more information on json.du
 
 I used the class notes by Abram Hindle to better familiarize myself with Websockets.
 
+Tried to use this link https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes to implement hearts. Turned out a little wonky but I kind of like it so I'll be submitting it like this in the meantime.
+
 Contributors / Licensing
 ========================
 
